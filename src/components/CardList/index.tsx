@@ -1,8 +1,14 @@
 import Card from "../Card";
 
+import { Monster } from "../../App";
+
 import './styles.css'
 
-const CardList = ({ monsters }) => (
+type CardListProps = {
+  monsters: Monster[];
+};
+
+const CardList = ({ monsters }: CardListProps) => (
   <div className="card-list">
     {monsters.map(monster => {
       return (
